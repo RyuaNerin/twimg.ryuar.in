@@ -10,7 +10,8 @@ code,
 kbd,
 pre,
 samp {
-	font-family: 'Apple SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '나눔 고딕', '맑은 고딕', 'Malgun Gothic', '돋움', dotum, sans-serif;
+	font-family: "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", "나눔 고딕",
+		"맑은 고딕", "Malgun Gothic", "돋움", dotum, sans-serif;
 	-webkit-tap-highlight-color: #222;
 }
 ::-moz-selection {
@@ -52,16 +53,18 @@ header {
 }
 
 header .icon {
-	background-image: url('./static/img.png');
-	width: 256px;
-	height: 256px;
+	background-image: url("./static/img.svg");
+	background-size: contain;
+	width: 384px;
+	height: 384px;
+	margin-bottom: -32px;
 }
 
 .hr {
 	display: inline-block;
 }
 .hr:after {
-	content: '';
+	content: "";
 	display: block;
 	border-top: 3px solid #0b3446;
 	margin-bottom: 0.25em;

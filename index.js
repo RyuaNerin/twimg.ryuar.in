@@ -1,85 +1,74 @@
 "use strict";
-const chartColor = '#dc3545'; // .text-secondary
-const chartColorDNS = '#007bff'; // .text-primary
-const chartColorCache = '#17a2b8'; // .text-primary
+const chartColor = "#dc3545"; // .text-secondary
+const chartColorDNS = "#007bff"; // .text-primary
+const chartColorCache = "#17a2b8"; // .text-primary
 const fontFamilly = `"Apple SD 산돌고딕 Neo","Apple SD Gothic Neo","나눔 고딕","맑은 고딕","Malgun Gothic","돋움",dotum,sans-serif`;
 function bytesToIECSpeed(bytes) {
-    if (typeof bytes !== 'number')
-        return '0 B';
+    if (typeof bytes !== "number")
+        return "0 B";
     if (bytes == 0)
-        return '0 B';
-    var sizes = ['B', 'KiB', 'MiB', 'GiB', 'TiB'];
+        return "0 B";
+    var sizes = ["B", "KiB", "MiB", "GiB", "TiB"];
     var i = 0;
     while (bytes > 1000 && i++ < 5) {
         bytes /= 1024;
     }
-    return Math.floor(bytes * 100) / 100 + ' ' + sizes[i] + '/s';
+    return Math.floor(bytes * 100) / 100 + " " + sizes[i] + "/s";
 }
 function addToRow(parent, elem) {
-    let row = document.createElement('div');
-    row.className = 'row justify-content-center';
-    let col = document.createElement('div');
-    col.className = 'col col-md-8';
+    let row = document.createElement("div");
+    row.className = "row justify-content-center";
+    let col = document.createElement("div");
+    col.className = "col col-md-8";
     col.append(elem);
     row.append(col);
     parent.append(row);
 }
-function drawTable(json) {
-    let serverDiv = $('#serverDiv');
-    let fontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-    let chartDataAftDns = [];
-    let chartDataAftCache = [];
-    let chartDataBef = [];
+function drawTable(data) {
+    let serverDiv = $("#serverDiv");
+    let fontSize = parseFloat(window
+        .getComputedStyle(document.body, null)
+        .getPropertyValue("font-size"));
+    let chartDataBest = [];
+    let chartDataCAche = [];
+    let chartDataDefault = [];
     let getData = (host) => {
-        if (!(host in json.detail)) {
-            chartDataAftDns.push(0);
-            chartDataAftCache.push(0);
-            chartDataBef.push(0);
+        if (!(host in data.detail)) {
+            chartDataBest.push(0);
+            chartDataCAche.push(0);
+            chartDataDefault.push(0);
             return;
         }
-        let rercod = {};
-        let detail = json.detail[host];
-        if (detail) {
-            detail.sort((a, b) => a.http.bps_avg + b.http.bps_avg);
-            for (var i = 0; i < detail.length; i++) {
-                const d = detail[i];
-                if (i == 0)
-                    rercod.dns = d.http.bps_avg;
-                if (d.domain == 'ryuar.in')
-                    rercod.cache = d.http.bps_avg;
-                if (d.default_cdn)
-                    rercod.default = d.http.bps_avg;
-            }
-        }
-        chartDataAftDns.push(rercod.dns || 0);
-        chartDataAftCache.push(rercod.cache || 0);
-        chartDataBef.push(rercod.default || 0);
+        const detail = data.detail[host];
+        chartDataBest.push(detail.best.speed || 0);
+        chartDataCAche.push(detail.cache.speed || 0);
+        chartDataDefault.push(detail.default.speed || 0);
     };
-    getData('pbs.twimg.com');
-    getData('video.twimg.com');
-    let chart = document.createElement('canvas');
+    getData("pbs.twimg.com");
+    getData("video.twimg.com");
+    let chart = document.createElement("canvas");
     addToRow(serverDiv, chart);
     new Chart(chart, {
-        type: 'horizontalBar',
+        type: "horizontalBar",
         data: {
             datasets: [
                 {
-                    label: '옵션1 적용',
+                    label: "옵션1 적용",
                     backgroundColor: [chartColorDNS, chartColorDNS],
-                    data: chartDataAftDns,
+                    data: chartDataBest,
                 },
                 {
-                    label: '옵션2 적용',
+                    label: "옵션2 적용",
                     backgroundColor: [chartColorCache, chartColorCache],
-                    data: chartDataAftCache,
+                    data: chartDataCAche,
                 },
                 {
-                    label: '적용 전',
+                    label: "적용 전",
                     backgroundColor: [chartColor, chartColor],
-                    data: chartDataBef,
+                    data: chartDataDefault,
                 },
             ],
-            labels: ['이미지', '비디오'],
+            labels: ["이미지", "비디오"],
         },
         options: {
             responsive: true,
@@ -101,7 +90,7 @@ function drawTable(json) {
             responsiveAnimationDuration: 0,
             legend: {
                 display: true,
-                position: 'top',
+                position: "top",
                 labels: {
                     fontSize: fontSize,
                     fontFamily: fontFamilly,
@@ -111,17 +100,17 @@ function drawTable(json) {
                 fontSize: fontSize * 1.5,
                 fontFamily: fontFamilly,
                 display: true,
-                text: json.updated_at + ' 기준',
+                text: data.updated_at + " 기준",
             },
             tooltips: {
-                mode: 'nearest',
+                mode: "nearest",
                 xPadding: 10,
                 yPadding: 10,
                 bodyFontFamily: fontFamilly,
                 bodyFontSize: fontSize,
                 displayColors: false,
                 callbacks: {
-                    title: () => '',
+                    title: () => "",
                     label: (tooltipItem) => bytesToIECSpeed(tooltipItem.xLabel),
                 },
             },

@@ -137,17 +137,26 @@ function drawTable(data) {
 $(document).ready(() => {
     $.ajax({
         method: "GET",
+        url: "/json.2",
+        async: true,
+        complete: (r) => {
+            if (r.status == 200) {
+                const d = JSON.parse(r.responseText);
+                if (d)
+                    drawTable(d);
+            }
+        },
+    });
+    $.ajax({
+        method: "GET",
         url: "//test.twimg.ryuar.in",
         timeout: 3000,
         async: true,
         complete: (r) => {
             if (r.status == 200) {
                 switch (r.responseText) {
-                    case "O1":
-                        $("#with-option1").removeAttr("hidden");
-                        break;
-                    case "O2":
-                        $("#with-option2").removeAttr("hidden");
+                    case "WITH TWIMG-DNS":
+                        $("#with-option").removeAttr("hidden");
                         break;
                 }
             }

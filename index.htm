@@ -105,6 +105,48 @@
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
     <link rel="stylesheet" href="index.css" />
+
+    <!------------------------------------------------------------------------------------------>
+
+    <style>
+      .bmc-button img {
+        height: 34px !important;
+        width: 35px !important;
+        margin-bottom: 1px !important;
+        box-shadow: none !important;
+        border: none !important;
+        vertical-align: middle !important;
+      }
+      .bmc-button {
+        padding: 7px 15px 7px 10px !important;
+        line-height: 35px !important;
+        height: 51px !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        color: #ffffff !important;
+        background-color: #5f7fff !important;
+        border-radius: 5px !important;
+        border: 1px solid transparent !important;
+        padding: 7px 15px 7px 10px !important;
+        font-size: 20px !important;
+        letter-spacing: -0.08px !important;
+        box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+        -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+        margin: 0 auto !important;
+        font-family: "Lato", sans-serif !important;
+        -webkit-box-sizing: border-box !important;
+        box-sizing: border-box !important;
+      }
+      .bmc-button:hover,
+      .bmc-button:active,
+      .bmc-button:focus {
+        -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+        text-decoration: none !important;
+        box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+        opacity: 0.85 !important;
+        color: #ffffff !important;
+      }
+    </style>
   </head>
 
   <body class="text-center">
@@ -134,7 +176,7 @@
             <a class="nav-link" href="#server">적용 전/후 비교</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#option1">적용하기</a>
+            <a class="nav-link" href="#manual">적용하기</a>
           </li>
         </ul>
       </div>
@@ -149,7 +191,10 @@
           로딩 속도 개선를 개선해요
         </p>
         <p class="h4 d-none d-sm-block">트위터 이미지의 로딩 속도를 개선해요</p>
-        <p id="with-option1" class="h5" hidden>TWIMG-DNS 와 함께하고 있어요!</p>
+
+        <p id="with-option" class="mt-3 font-weight-bold" hidden>
+          - TWIMG-DNS 와 함께하고 있어요! -
+        </p>
       </div>
     </header>
 
@@ -165,12 +210,8 @@
             <p>Twimg-DNS 와 함께 트위터 이미지 로딩속도를 개선해요</p>
             <hr />
 
-            <p>
-              이 서비스는 개인이 <strong>월 만원의 서버비</strong>를 들여
-              운영해요
-            </p>
+            <p>이 서비스는 <strong>개발자의 사비</strong>를 들여 운영해요</p>
             <p>때문에 언제 어떻게 서비스가 종료될 지 몰라요</p>
-            <hr />
 
             <h4>만든이</h4>
             <a href="https://ryuar.in" target="_blank" class="d-inline-block">
@@ -180,6 +221,26 @@
               />
               <p><strong>RyuaNerin</strong></p>
             </a>
+
+            <div>
+              <link
+                href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext"
+                rel="stylesheet"
+              />
+              <a
+                class="bmc-button"
+                target="_blank"
+                href="https://www.buymeacoffee.com/RyuaNerin"
+              >
+                <img
+                  src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+                  alt="커피 한 잔 사주기"
+                />
+                <span style="margin-left: 5px; font-size: 19px !important;">
+                  커피 한 잔 사주기
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -191,13 +252,13 @@
           <div class="col-md-8">
             <h2 class="hr">적용 전/후 비교</h2>
 
-            <div>한국 기준이에요. 해외의 경우 더 느려질 수 있어요.</div>
+            <p>한국 기준이에요. 해외의 경우 해당되지 않아요</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="option1" class="py-4">
+    <section id="manual" class="py-4">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8">
@@ -215,9 +276,10 @@
             <hr />
             <ul>
               <li>
-                전 세계 각지의 트위터 이미지 서버중 제일 빠른 서버로 연결해줘요
+                전 세계 각지의 트위터 이미지 서버중 제일 빠른 서버를 찾아
+                연결해요
               </li>
-              <li>일정 시간마다 갱신해서 빠른 속도를 유지하게해해줘요</li>
+              <li>일정 시간마다 갱신해서 빠른 속도를 유지해요</li>
               <li>
                 측정 결과는 위 <a href="#server">적용 전/후 비교</a> 에서 볼 수
                 있어요
@@ -231,6 +293,9 @@
                   영상에 적인 IP 가 아니라 <code>141.164.54.111</code> 을
                   입력해야해요.
                 </strong>
+              </p>
+              <p>
+                설정 후에 재부팅 해주시는 것을 권장해요
               </p>
 
               <div class="os-badge">
@@ -255,6 +320,16 @@
                 >
                 </a>
               </div>
+
+              <hr />
+              <p>
+                <strong>윈도우</strong> 와 <strong>iOS</strong> 는 적용 후에 이
+                페이지에 다시 접속해보세요
+              </p>
+              <p>
+                <strong>TWIMG-DNS 와 함께하고 있어요!</strong> 문구를 볼 수 있을
+                거에요!
+              </p>
             </div>
           </div>
         </div>
@@ -299,9 +374,20 @@
       integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
       crossorigin="anonymous"
     ></script>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-51806220-7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-51806220-7");
+    </script>
     <!-- data -->
     <script src="index.js"></script>
-    <script src="chart-data.js"></script>
   </body>
 </html>

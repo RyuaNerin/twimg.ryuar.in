@@ -53,7 +53,7 @@ header {
 }
 
 header .icon {
-	background-image: url("./static/img.svg");
+	background-image: url("/static/img/img.svg");
 	background-size: contain;
 	width: 384px;
 	height: 384px;

@@ -94,3 +94,8 @@ section:nth-child(odd) {
 	text-decoration: none;
 	display: inline-block;
 }
+
+.os-badge2 a img {
+	font-size: 6em;
+	height: 1em;
+}

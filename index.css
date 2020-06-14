@@ -85,6 +85,12 @@ section:nth-child(odd) {
 	background-color: #fafcff;
 }
 
-.android-badge {
-	height: 5em;
+.os-badge {
+	font-size: 4em;
+	word-spacing: 0.5em;
+}
+
+.os-badge a {
+	text-decoration: none;
+	display: inline-block;
 }

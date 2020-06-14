@@ -100,6 +100,10 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
 
@@ -130,10 +134,7 @@
             <a class="nav-link" href="#server">적용 전/후 비교</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#option1">옵션1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#option2">옵션2</a>
+            <a class="nav-link" href="#option1">적용하기</a>
           </li>
         </ul>
       </div>
@@ -148,6 +149,7 @@
           로딩 속도 개선를 개선해요
         </p>
         <p class="h4 d-none d-sm-block">트위터 이미지의 로딩 속도를 개선해요</p>
+        <p id="with-option1" class="h5" hidden>TWIMG-DNS 와 함께하고 있어요!</p>
       </div>
     </header>
 
@@ -199,13 +201,15 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <h2 class="hr">옵션 1 적용하기</h2>
+            <h2 class="hr">적용하기</h2>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-7 text-left">
             <p class="text-center h3">
-              <strong>DNS 를 <code>141.164.49.73</code>로 설정해주세요.</strong>
+              <strong>
+                DNS 를 <code>141.164.54.111</code>로 설정해주세요.
+              </strong>
             </p>
 
             <hr />
@@ -221,412 +225,35 @@
             </ul>
 
             <hr />
-            <h3 class="text-center">공식 지원 앱</h3>
             <div class="text-center">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.sokcuri.twimgspeedproxy&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-                target="_blank"
-              >
-                <img
-                  class="android-badge"
-                  alt="다운로드하기 Google Play"
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png"
-                />
-              </a>
-            </div>
+              <p class="text-center">
+                <strong>
+                  영상에 적인 IP 가 아니라 <code>141.164.54.111</code> 을
+                  입력해야해요.
+                </strong>
+              </p>
 
-            <hr />
-            <h3 class="text-center">수동 적용 영상</h3>
-
-            <div
-              class="list-group list-group-horizontal-lg text-center mb-2"
-              role="tablist"
-            >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-windows-list"
-                data-toggle="list"
-                href="#list-windows"
-                role="tab"
-                aria-controls="windows"
-                >윈도우</a
-              >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-ios-list"
-                data-toggle="list"
-                href="#list-ios"
-                role="tab"
-                aria-controls="ios"
-                >iOS</a
-              >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-android-list"
-                data-toggle="list"
-                href="#list-android"
-                role="tab"
-                aria-controls="android"
-                >안드로이드</a
-              >
-            </div>
-            <div class="tab-content text-center my-2">
-              <div
-                class="tab-pane fade"
-                id="list-windows"
-                role="tabpanel"
-                aria-labelledby="list-windows-list"
-              >
-                <p>
-                  <strong
-                    >영상에 적인 IP 가 아니라 <code>141.164.49.73</code> 을
-                    입력해야합니다.</strong
-                  >
-                </p>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe
-                    class="embed-responsive-item"
-                    src="https://www.youtube.com/embed/eUdd0rKnDoQ"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="list-ios"
-                role="tabpanel"
-                aria-labelledby="list-ios-list"
-              >
-                <p>
-                  <strong
-                    >영상에 적인 IP 가 아니라 <code>141.164.49.73</code> 을
-                    입력해야합니다.</strong
-                  >
-                </p>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe
-                    class="embed-responsive-item"
-                    src="https://www.youtube.com/embed/W87FEMm7Uj0"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="list-android"
-                role="tabpanel"
-                aria-labelledby="list-android-list"
-              >
-                TODO
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="option2" class="py-4">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col col-md-8">
-            <h2 class="hr">옵션2 적용하기</h2>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col col-md-8 text-left">
-            <ul>
-              <li>RyuaNerin 의 개인 캐시서버를 사용해요.</li>
-            </ul>
-
-            <hr />
-            <h4 class="text-center">주의사항</h4>
-            <ul>
-              <li>옵션 2를 이용하기 위해서는 CA 인증서를 설치해야 합니다</li>
-              <li>
-                CA 인증서란
-                <strong
-                  >접속한 서버의 인증서가 신뢰 할 수 있는 서버라는 것을
-                  보장</strong
+              <div class="os-badge">
+                <a
+                  class="fab fa-windows"
+                  href="https://youtu.be/eUdd0rKnDoQ"
+                  target="_blank"
                 >
-                한다고 할 때 사용하는 인증서입니다
-              </li>
-              <li>
-                개인의 CA 인증서를 설치 및 신뢰하는 것은 굉장히 위험한
-                행위입니다
-              </li>
-              <li>
-                개인의 CA 인증서 설치 시, 인증서의 소유자에게
-                <strong>MITM 공격을 허용</strong>하게 됩니다.
-                <ul>
-                  <li>
-                    MITM 공격 : 네트워크 통신을 조작하여 통신 내용을 도청하거나
-                    조작하는 공격 기법.
-                  </li>
-                  <li>
-                    한마디로 제가 악용하게되면 여러분의 모든 통신 데이터를
-                    열어볼 수 있습니다.
-                  </li>
-                  <li>
-                    참고 문서
-                    <ul>
-                      <li>
-                        <a
-                          href="http://www.itworld.co.kr/news/117021"
-                          target="_blank"
-                          rel="nofollow"
-                        >
-                          MitM 공격이란 무엇인가 "MitM 공격의 메커니즘과
-                          예방법", ITWORLD
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://blog.naver.com/ucert/221201640816"
-                          target="_blank"
-                          rel="nofollow"
-                        >
-                          중간자 공격(Man-in-the-middle attack)이란? 그
-                          대처방법은?, UCERT 공식 블로그
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>본 캐시 서버는 공식 서비스가 아닙니다</li>
-              <li>
-                따라서
-                <strong
-                  >기존의 서버를 대체하려면 이러한 MITM 공격 기법이 필요</strong
-                >합니다
-                <ul>
-                  <li>
-                    Adguard 윈도우 혹은 프록시 방식의 광고차단 소프트웨어 또한
-                    이러한 방법을 사용하고 있습니다.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <p>
-                  위 경고문을 읽고, 충분히 검토하신 후 옵션1 혹은 옵션2를
-                  적용해주세요
-                </p>
-              </li>
-            </ul>
+                </a>
 
-            <hr />
-            <h3 class="text-center">1 단계</h3>
-            <p class="text-center h5">
-              <strong
-                >DNS 를 <code>141.164.54.111</code>로 설정해주세요.</strong
-              >
-            </p>
+                <a
+                  class="fab fa-apple"
+                  href="https://youtu.be/W87FEMm7Uj0"
+                  target="_blank"
+                >
+                </a>
 
-            <div
-              class="list-group list-group-horizontal-lg text-center"
-              role="tablist"
-            >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-windows2-list"
-                data-toggle="list"
-                href="#list-windows2"
-                role="tab"
-                aria-controls="windows2"
-                >윈도우</a
-              >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-ios2-list"
-                data-toggle="list"
-                href="#list-ios2"
-                role="tab"
-                aria-controls="ios2"
-                >iOS</a
-              >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-android2-list"
-                data-toggle="list"
-                href="#list-android2"
-                role="tab"
-                aria-controls="android2"
-                >안드로이드</a
-              >
-            </div>
-            <div class="tab-content text-center my-2">
-              <div
-                class="tab-pane fade"
-                id="list-windows2"
-                role="tabpanel"
-                aria-labelledby="list-windows2-list"
-              >
-                <p>
-                  <strong
-                    >영상에 적인 IP 가 아니라 <code>141.164.54.111</code> 을
-                    입력해야합니다.</strong
-                  >
-                </p>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe
-                    class="embed-responsive-item"
-                    src="https://www.youtube.com/embed/eUdd0rKnDoQ"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="list-ios2"
-                role="tabpanel"
-                aria-labelledby="list-ios2-list"
-              >
-                <p>
-                  <strong
-                    >영상에 적인 IP 가 아니라 <code>141.164.54.111</code> 을
-                    입력해야합니다.</strong
-                  >
-                </p>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe
-                    class="embed-responsive-item"
-                    src="https://www.youtube.com/embed/W87FEMm7Uj0"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="list-android2"
-                role="tabpanel"
-                aria-labelledby="list-android2-list"
-              >
-                TODO
-              </div>
-            </div>
-
-            <hr />
-            <h3 class="text-center">2 단계</h3>
-            <p class="text-center h5">
-              <strong>
-                <a href="https://files.ryuar.in/twimg.crt">이 인증서</a>를
-                다운로드 해서 설치해주세요.
-              </strong>
-            </p>
-
-            <div
-              class="list-group list-group-horizontal-lg text-center mb-2"
-              role="tablist"
-            >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-windows22-list"
-                data-toggle="list"
-                href="#list-windows22"
-                role="tab"
-                aria-controls="windows22"
-                >윈도우</a
-              >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-ios22-list"
-                data-toggle="list"
-                href="#list-ios22"
-                role="tab"
-                aria-controls="ios22"
-                >iOS</a
-              >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-android22-list"
-                data-toggle="list"
-                href="#list-android22"
-                role="tab"
-                aria-controls="android22"
-                >안드로이드</a
-              >
-            </div>
-            <div class="tab-content">
-              <div
-                class="tab-pane fade"
-                id="list-windows22"
-                role="tabpanel"
-                aria-labelledby="list-windows22-list"
-              >
-                <ol>
-                  <li>
-                    <a href="https://files.ryuar.in/twimg.crt" rel="nofollow"
-                      >인증서 다운로드</a
-                    >
-                  </li>
-                  <li>파일 우클릭 - 인증서 설치</li>
-                  <li><code>로컬 컴퓨터</code> - 다음</li>
-                  <li>
-                    <code>모든 인증서를 다음 저장소에 저장</code> -
-                    <code>찾아보기</code> -
-                    <code>신뢰할 수 있는 루트 인증기관</code> -
-                    <code>다음</code>
-                  </li>
-                  <li>끝.</li>
-                </ol>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="list-ios22"
-                role="tabpanel"
-                aria-labelledby="list-ios22-list"
-              >
-                <p>
-                  참고 영상 :
-                  <a href="https://youtu.be/-_7bwZ4yEaY" rel="nofollow"
-                    >https://youtu.be/-_7bwZ4yEaY</a
-                  >
-                </p>
-                <ol>
-                  <li>
-                    <a href="https://files.ryuar.in/twimg.crt" rel="nofollow"
-                      >인증서 다운로드</a
-                    >
-                    → 허용 → 닫기
-                  </li>
-                  <li><code>설정</code> 앱 실행</li>
-                  <li><code>프로파일이 다운로드 됨</code> 항목 선택</li>
-                  <li><code>Unofficial twitter image server, CA</code> 확인</li>
-                  <li>오른쪽 상단 <code>설치</code></li>
-                  <li>비밀번호 입력 → <code>설치</code> → <code>완료</code></li>
-                  <li>
-                    <code>설정</code> 앱 → <code>일반</code> → <code>정보</code>
-                  </li>
-                  <li>맨 밑 <code>인증서 신뢰 설정</code> 항목 선택</li>
-                  <li>
-                    <code>Unofficial twitter image server, CA</code> 체크 →
-                    <code>계속</code>
-                  </li>
-                  <li>끝.</li>
-                </ol>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="list-android22"
-                role="tabpanel"
-                aria-labelledby="list-android22-list"
-              >
-                <ol>
-                  <li>
-                    <a href="https://files.ryuar.in/twimg.crt" rel="nofollow"
-                      >인증서 다운로드</a
-                    >
-                  </li>
-                  <li><code>설정</code> 앱 실행</li>
-                  <li><code>생체 인식 및 보안</code> 항목 선택</li>
-                  <li><code>기타 보안 설정</code> 항목 선택</li>
-                  <li><code>디바이스에 저장된 인증서 설치</code> 항목 선택</li>
-                  <li>위에서 다운로드 한 인증서 선택</li>
-                  <li><code>확인</code></li>
-                  <li>끝.</li>
-                </ol>
+                <a
+                  class="fab fa-android"
+                  href="https://play.google.com/store/apps/details?id=com.sokcuri.twimgspeedproxy&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+                  target="_blank"
+                >
+                </a>
               </div>
             </div>
           </div>
@@ -652,8 +279,8 @@
 
     <!-- Bootstrap -->
     <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
     <script
@@ -675,48 +302,6 @@
 
     <!-- data -->
     <script src="index.js"></script>
-    <script>
-      let data = {
-        updated_at: "2020-05-30 16:01 (+09:00)",
-        detail: {
-          "pbs.twimg.com": {
-            default: {
-              addr: "192.229.237.96",
-              ping: 82.80158,
-              speed: 4131630.866009428,
-            },
-            cache: {
-              addr: "121.167.84.185",
-              ping: 0.99996,
-              speed: 96420762.94828464,
-            },
-            best: {
-              addr: "23.218.22.152",
-              ping: 31.59994,
-              speed: 5418494.280588841,
-            },
-          },
-          "video.twimg.com": {
-            default: {
-              addr: "117.18.232.102",
-              ping: 83.20048,
-              speed: 714614.9237259405,
-            },
-            cache: {
-              addr: "121.167.84.185",
-              ping: 0.8004,
-              speed: 81175803.25678825,
-            },
-            best: {
-              addr: "184.31.10.236",
-              ping: 113.59854,
-              speed: 69792738.35819496,
-            },
-          },
-        },
-      };
-
-      $(document).ready(() => drawTable(data));
-    </script>
+    <script src="chart-data.js"></script>
   </body>
 </html>

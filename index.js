@@ -30,18 +30,15 @@ function drawTable(data) {
         .getComputedStyle(document.body, null)
         .getPropertyValue("font-size"));
     let chartDataBest = [];
-    let chartDataCAche = [];
     let chartDataDefault = [];
     let getData = (host) => {
         if (!(host in data.detail)) {
             chartDataBest.push(0);
-            chartDataCAche.push(0);
             chartDataDefault.push(0);
             return;
         }
         const detail = data.detail[host];
         chartDataBest.push(detail.best.speed || 0);
-        chartDataCAche.push(detail.cache.speed || 0);
         chartDataDefault.push(detail.default.speed || 0);
     };
     getData("pbs.twimg.com");
@@ -53,14 +50,9 @@ function drawTable(data) {
         data: {
             datasets: [
                 {
-                    label: "옵션1 적용",
+                    label: "적용 후",
                     backgroundColor: [chartColorDNS, chartColorDNS],
                     data: chartDataBest,
-                },
-                {
-                    label: "옵션2 적용",
-                    backgroundColor: [chartColorCache, chartColorCache],
-                    data: chartDataCAche,
                 },
                 {
                     label: "적용 전",
@@ -142,3 +134,23 @@ function drawTable(data) {
         },
     });
 }
+$(document).ready(() => {
+    $.ajax({
+        method: "GET",
+        url: "//test.twimg.ryuar.in",
+        timeout: 3000,
+        async: true,
+        complete: (r) => {
+            if (r.status == 200) {
+                switch (r.responseText) {
+                    case "O1":
+                        $("#with-option1").removeAttr("hidden");
+                        break;
+                    case "O2":
+                        $("#with-option2").removeAttr("hidden");
+                        break;
+                }
+            }
+        },
+    });
+});
